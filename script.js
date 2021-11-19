@@ -20,24 +20,8 @@ function executar() {
         i = taxaJurus
         
         N = tempo;
-
-        var p1 = 0;
-        var p2 = 0;
-        var p3 = 0;
-        var p4 = 0;
-        var p5 = 0;
         
-        p1 = (1 + (i/100));
-
-        p2 = p1**N;
-
-        p3 = p2 -1;
-
-        p4 = p3 / (i/100);
-
-        p5 = p4 * P;
-
-        VF = (p5).toFixed(2);
+        VF = (((((1 + (i/100))**N)-1)/(i/100))*P).toFixed(2);
 
 
         resultado.textContent = `${nome}, se voce aplicar R$ ${P} por mês, à taxa de jurus de ${i}% ao mês, durante ${N} meses, acumulará uma poupança de R$ ${VF}`;
