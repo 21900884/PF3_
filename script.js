@@ -10,16 +10,10 @@ function processing() {
 
     if (nome !== '' && valorMensal !== '' && taxaJurus !== '' && duracao !== '') {
         
-        var P = 0;
-        var i = 0;
-        var N = 0;
+        var P = valorMensal;
+        var i = taxaJurus;
+        var N = duracao;
         var VF = 0;
-        
-        P = valorMensal;
-
-        i = taxaJurus
-        
-        N = duracao;
         
         VF = (((((1 + (i/100))**N)-1)/(i/100))*P).toFixed(2);
 
