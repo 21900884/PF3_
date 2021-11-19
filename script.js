@@ -8,6 +8,8 @@ function executar() {
     const tempo = document.getElementById('tempo').value;
     const resultado = document.getElementById('resultado');
     
+    window. alert("Test");
+    
     alert("INIT");
     alert(nome);
     alert(valorMensal);
