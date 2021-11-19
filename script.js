@@ -8,7 +8,7 @@ function executar() {
     const tempo = document.getElementById('tempo').value;
     const resultado = document.getElementById('resultado');
     
-    window. alert("Test");
+    window.alert("Test");
     
     alert("INIT");
     alert(nome);
@@ -36,7 +36,7 @@ function executar() {
         alert(VF);
 
 
-        resultado.textContent = `${nome}, se voce aplicar R$ ${P} por mês, à taxa de jurus de ${i} ao mês, durante ${N} meses, acumulará uma poupança de R$ ${VF}`;
+        resultado.textContent = `teste`;
 
     }else {
         resultado.textContent = 'Preencha todos os campos.';
