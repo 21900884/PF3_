@@ -20,14 +20,19 @@ function executar() {
     if (nome !== '' && valorMensal !== '' && taxaJurus !== '' && tempo !== '') {
         
         alert("a");
-
-        const P = valorMensal.toFixed(2);
-
-        const i = (taxaJurus/100).toFixed(2);
         
-        const N = tempo.toFixed(2);
+        var P = 0;
+        var i = 0;
+        var N = 0;
+        var VF = 0;
 
-        const VF = P*( (1+i)**N -1 / i ).toFixed(2);
+        P = valorMensal.toFixed(2);
+
+        i = (taxaJurus/100).toFixed(2);
+        
+        N = tempo.toFixed(2);
+
+        VF = P*( (1+i)**N -1 / i ).toFixed(2);
         
         
         alert(P);
