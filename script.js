@@ -7,8 +7,17 @@ function executar() {
     const taxaJurus = document.getElementById('taxaJurus').value;
     const tempo = document.getElementById('tempo').value;
     const resultado = document.getElementById('resultado');
+    
+    alert("INIT");
+    alert(nome);
+    alert(valorMensal);
+    alert(taxaJurus);
+    alert(tempo);
+    
 
     if (nome !== '' && valorMensal !== '' && taxaJurus !== '' && tempo !== '') {
+        
+        alert("a");
 
         const P = valorMensal.toFixed(2);
 
@@ -17,12 +26,20 @@ function executar() {
         const N = tempo.toFixed(2);
 
         const VF = P*( (1+i)**N -1 / i ).toFixed(2);
+        
+        
+        alert(P);
+        alert(i);
+        alert(N);
+        alert(VF);
 
 
-        resultado.textContent = `${nome}, se voce aplicar R$ ${valorMensal} por mês, à taxa de jurus de ${taxaJurus} ao mês, durante ${tempo} meses, acumulará uma poupança de R$ ${VF}`;
+        resultado.textContent = `${nome}, se voce aplicar R$ ${P} por mês, à taxa de jurus de ${i} ao mês, durante ${N} meses, acumulará uma poupança de R$ ${VF}`;
 
     }else {
         resultado.textContent = 'Preencha todos os campos.';
+        
+        alert("sem dados");
     }
 
 }
