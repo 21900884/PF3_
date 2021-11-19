@@ -1,7 +1,7 @@
 const calcular = document.getElementById('calcular');
 
 
-function processing() {
+function executar() {
     const nome = document.getElementById('nome').value;
     const valorMensal = document.getElementById('valorMensal').value;
     const taxaJurus = document.getElementById('taxaJurus').value;
@@ -28,4 +28,4 @@ function processing() {
 }
 
 
-calcular.addEventListener('click', processing);
+calcular.addEventListener('click', executar);
