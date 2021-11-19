@@ -7,41 +7,40 @@ function executar() {
     const taxaJurus = document.getElementById('taxaJurus').value;
     const tempo = document.getElementById('tempo').value;
     const resultado = document.getElementById('resultado');
-    
-    window.alert("Test");
-    
-    alert("INIT");
-    alert(nome);
-    alert(valorMensal);
-    alert(taxaJurus);
-    alert(tempo);
-    
 
     if (nome !== '' && valorMensal !== '' && taxaJurus !== '' && tempo !== '') {
-        
-        alert("a");
         
         var P = 0;
         var i = 0;
         var N = 0;
         var VF = 0;
-
-        P = valorMensal.toFixed(2);
-
-        i = (taxaJurus/100).toFixed(2);
         
-        N = tempo.toFixed(2);
+        P = valorMensal;
 
-        VF = P*( (1+i)**N -1 / i ).toFixed(2);
+        i = taxaJurus
         
+        N = tempo;
+
+        var p1 = 0;
+        var p2 = 0;
+        var p3 = 0;
+        var p4 = 0;
+        var p5 = 0;
         
-        alert(P);
-        alert(i);
-        alert(N);
-        alert(VF);
+        p1 = (1 + (i/100));
+
+        p2 = p1**N;
+
+        p3 = p2 -1;
+
+        p4 = p3 / (i/100);
+
+        p5 = p4 * P;
+
+        VF = (p5).toFixed(2);
 
 
-        resultado.textContent = `teste`;
+        resultado.textContent = `${nome}, se voce aplicar R$ ${P} por mês, à taxa de jurus de ${i}% ao mês, durante ${N} meses, acumulará uma poupança de R$ ${VF}`;
 
     }else {
         resultado.textContent = 'Preencha todos os campos.';
