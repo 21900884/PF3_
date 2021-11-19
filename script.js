@@ -12,7 +12,7 @@ function processing() {
 
         var P = valorMensal.toFixed(2);
 
-        var i = taxaJurus.toFixed(2);
+        var i = (taxaJurus/100).toFixed(2);
         
         var N = tempo.toFixed(2);
 
